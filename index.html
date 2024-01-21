@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+    <!-- setting up the website settings-->
+    <head>
+        <meta charset = "utf-8">  <!-- translate symbol to bites (unicode) -->
+        <meta name = "viewport" content = "width=device-width, intital-scale=1">  <!-- compatible size for all devices according to their display area -->
+        <title>InnovexBedTracker</title>  <!-- website name -->
+    </head>
+
+    <!-- start writing-->
+    <body>
+        
+        <!-- headers-->
+        <h1>bedtracker app</h1>
+        <h2> Your name</h2>
+        
+        <!-- paragraphs-->
+        <p>how are u</p>
+        <p>ill kill you</p>
+        <br><br>
+
+        <!-- inserting LINKS-->
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUKcml4ayByb2xsXA%3D%3D"target="_blank"> click me</a>
+        <br>
+
+        <!-- inserting IMAGES-->
+        <img src="rick.jpg" broder="10">
+
+        <!-- inserting LISTS-->
+        <ol>
+            <li>angry</li>
+            <li>sad</li>
+            <li>disapointed</li>
+            <li>happy</li>
+                <ul>
+                    <li>how</li>
+                    <li>why</li>
+                    <li>u suck</li>
+                </ul>
+            <li>excited</li>
+        </ol>
+
+        <!-- inserting TABLES-->
+        <table border = "7" cellpadding = "10">
+            <tr>
+                <th></th>
+                <th>one   </th>
+                <th>two   </th>
+                <th>three </th>
+                <th>four  </th>
+            </tr>
+            <tr>
+                <td rowspan="3">cursed<br>names</td>
+                <td>read tart</td>
+                <td>gape horn</td>
+                <td>pedo demon</td>
+                <td>kurly pewbs</td>
+            </tr>
+            <tr>
+                <td>read tart</td>
+                <td>gape horn</td>
+                <td>pedo demon</td>
+                <td>kurly pewbs</td>
+            </tr>
+            <tr>
+                <td>read tart</td>
+                <td>gape horn</td>
+                <td>pedo demon</td>
+                <td>kurly pewbs</td>
+            </tr>
+        </table>
+
+        <br>
+        <p>write your name to display room number  // jake emma sophia</p>
+
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <div id="information"></div>
+        
+        <script>
+        const nameInput = document.getElementById("nameInput");
+        const informationDiv = document.getElementById("information");
+        
+        nameInput.addEventListener("input", () => {
+          const name = nameInput.value.toLowerCase(); // Convert name to lowercase for case-insensitive matching
+          const information = getInformation(name);
+          informationDiv.textContent = information;
+        });
+        
+        function getInformation(name) {
+          const roomAssignments = {
+            "jake": "room 1",
+            "emma": "room 2",
+            "sophia": "room 3",
+            // Add more name-room pairs as needed
+          };
+        
+          return roomAssignments[name] || "Room not found"; // Return room or default message
+        }
+        </script>
+
+
+    </body>
+
+
+</html>
+
